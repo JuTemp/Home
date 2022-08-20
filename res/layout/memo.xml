@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="fill"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/memoAdd"
+        style="@style/cm"
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:text="@string/memo_add" />
+
+    <view
+        android:id="@+id/memoListView"
+        class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </view>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

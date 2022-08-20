@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/base64Content"
+        style="@style/c"
+        android:hint="@string/base64_content_hint"
+        android:maxLines="10" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/base64Encoded"
+        style="@style/c"
+        android:hint="@string/base64_encoded_hint"
+        android:maxLines="10" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/base64Exec"
+        style="@style/cm"
+        android:text="@string/base64_exec" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

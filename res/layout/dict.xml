@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edin_edittext"
+        style="@style/c"
+        android:lines="1"
+        android:singleLine="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/trans"
+        style="@style/cm"
+        android:text="@string/dict_translate" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/dict_voice"
+        style="@style/c"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bre"
+            style="@style/cm"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/dict_b" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/name"
+            style="@style/cm"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/dict_a" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/edin_textview"
+        style="@style/cm" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/edout"
+            style="@style/cm"
+            android:textColor="#FF404040"
+            android:textStyle="bold" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

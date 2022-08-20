@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/hymmnosTextIn"
+        style="@style/c"
+        android:maxLines="10" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/hymmnosTrans"
+        style="@style/cm"
+        android:text="@string/hymmnos_trans" />
+
+    <androidx.core.widget.NestedScrollView style="@style/c">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/hymmnosTextOut"
+            style="@style/cm"
+            android:textSize="10pt" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

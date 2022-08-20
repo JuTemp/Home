@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="fill"
+	android:orientation="vertical">
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/urllistAdd"
+		style="@style/cm"
+		android:layout_width="fill_parent"
+		android:layout_height="20pt"
+		android:text="@string/urllist_add" />
+
+	<com.JuTemp.Home.MyView.DragListView
+		android:id="@+id/urllistDragListView"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.JuTemp.Home">
+
+    <application
+        android:name=".ApplJuTemp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_new"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MaterialComponents.Override"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".HomeJuTemp"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.OverrideHome"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" /><!-- 获取文本 -->
+                <data android:mimeType="text/html" /><!-- 获取url -->
+                <data android:mimeType="image/jpeg" /><!-- 获取图片 -->
+                <data android:mimeType="image/gif" /><!-- 获取图片 -->
+                <data android:mimeType="image/bmp" /><!-- 获取图片 -->
+                <data android:mimeType="image/png" /><!-- 获取图片 -->
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PreferenceJuTemp"
+            android:label="@string/preference_appname"
+            android:theme="@style/Theme.MaterialComponents.OverridePreference" />
+
+        <activity
+            android:name=".LxActivityJuTemp"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@style/NoDisplay" />
+
+        <activity
+            android:name=".ExitJuTemp"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@style/NoDisplay" />
+
+        <activity android:name=".BootAlarmMemoJuTemp" />
+
+        <activity
+            android:name=".MarqueeActivityJuTemp"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <receiver
+            android:name=".BootBroadcastReceiverJuTemp"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".BootBroadcastService" />
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+</manifest>
