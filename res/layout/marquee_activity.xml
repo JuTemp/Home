@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/marquee_activity_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:autoSizeMaxTextSize="120pt"
+        android:autoSizeTextType="uniform"
+        android:background="@color/pinkConvertJuTemp"
+        android:textColor="@color/pinkJuTemp" />
+
+    <!--android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        TextView tvMarquee=(TextView) This.findViewById(R.id.marquee_activity_tv);
+        tvMarquee.setSelected(true);-->
+</androidx.appcompat.widget.LinearLayoutCompat>

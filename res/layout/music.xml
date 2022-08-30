@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buType"
+            style="@style/cm"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edin"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:lines="1"
+            android:singleLine="true" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dwnload"
+        style="@style/cm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/music_download" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tle"
+        style="@style/cm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:textSize="8pt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/url_short"
+        style="@style/cm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/url_long"
+        style="@style/cm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/feedback"
+        style="@style/cm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

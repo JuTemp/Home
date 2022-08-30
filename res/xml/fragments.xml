@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+
+    <FragmentLogic>
+        <entry key="Id">WebViewJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_webview</entry>
+        <entry key="Layout">R.layout.webview</entry>
+        <entry key="Actionbar">R.menu.menu_webview</entry>
+        <entry key="StringAppName">R.string.webview_appname</entry>
+        <entry key="StringActionbar">R.string.webview_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">URLListJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_urllist</entry>
+        <entry key="Layout">R.layout.urllist</entry>
+        <entry key="Actionbar">R.menu.menu_memo</entry>
+        <entry key="StringAppName">R.string.urllist_appname</entry>
+        <entry key="StringActionbar">R.string.urllist_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">DictJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_dict</entry>
+        <entry key="Layout">R.layout.dict</entry>
+        <entry key="Actionbar">R.menu.menu</entry>
+        <entry key="StringAppName">R.string.dict_appname</entry>
+        <entry key="StringActionbar">R.string.dict_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">MusicJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_music</entry>
+        <entry key="Layout">R.layout.music</entry>
+        <entry key="Actionbar">R.menu.menu</entry>
+        <entry key="StringAppName">R.string.music_appname</entry>
+        <entry key="StringActionbar">R.string.music_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">WuxibusJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_wuxibus</entry>
+        <entry key="Layout">R.layout.wuxibus</entry>
+        <entry key="Actionbar">R.menu.menu</entry>
+        <entry key="StringAppName">R.string.wuxibus_appname</entry>
+        <entry key="StringActionbar">R.string.wuxibus_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">MemoJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_memo</entry>
+        <entry key="Layout">R.layout.memo</entry>
+        <entry key="Actionbar">R.menu.menu_memo</entry>
+        <entry key="StringAppName">R.string.memo_appname</entry>
+        <entry key="StringActionbar">R.string.memo_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">QrJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_qr</entry>
+        <entry key="Layout">R.layout.qr</entry>
+        <entry key="Actionbar">R.menu.menu</entry>
+        <entry key="StringAppName">R.string.qr_appname</entry>
+        <entry key="StringActionbar">R.string.qr_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">MarqueeJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_marquee</entry>
+        <entry key="Layout">R.layout.marquee</entry>
+        <entry key="Actionbar">R.menu.menu</entry>
+        <entry key="StringAppName">R.string.marquee_appname</entry>
+        <entry key="StringActionbar">R.string.marquee_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
+        <entry key="Id">LxJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_lx</entry>
+        <entry key="Layout">R.layout.lx</entry>
+        <entry key="Actionbar">R.menu.menu_shortcut</entry>
+        <entry key="StringAppName">R.string.lx_appname</entry>
+        <entry key="StringActionbar">R.string.lx_actionbar</entry>
+    </FragmentLogic>
+
+</resource>

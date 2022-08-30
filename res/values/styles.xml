@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MaterialComponents.Override" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/pinkJuTemp</item>
+        <item name="colorPrimaryDark">@color/transparentJuTemp</item>
+        <item name="colorAccent">@color/pink40JuTemp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="cornerRadius">13dp</item>
+        <item name="rippleColor">@color/darkPinkJuTemp</item>
+        <!--<item name="android:textColor">#000000</item>-->
+    </style>
+
+    <style name="Theme.MaterialComponents.OverridePreference" parent="Theme.MaterialComponents.Override">
+        <item name="android:windowBackground">@drawable/arr_bg</item>
+        <item name="colorAccent">@color/darkPinkJuTemp</item>
+        <!--<item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>-->
+    </style>
+
+    <style name="Theme.MaterialComponents.OverrideHome" parent="Theme.MaterialComponents.Override">
+        <item name="android:windowBackground">@drawable/home_bg</item>
+        <!--<item name="colorAccent">@color/darkPinkJuTemp</item>-->
+        <!--<item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>-->
+    </style>
+
+    <style name="NoDisplay" parent="@android:style/Theme.NoDisplay" />
+
+    <style name="amina" parent="@style/AppTheme">
+        <item name="android:windowBackground">@drawable/amina</item>
+    </style>
+
+    <style name="c" parent="Theme.MaterialComponents.Override">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="m" parent="Theme.MaterialComponents.Override">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="cm" parent="Theme.MaterialComponents.Override">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
+
+</resources>

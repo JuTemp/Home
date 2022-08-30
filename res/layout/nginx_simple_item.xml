@@ -1,0 +1,49 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/li1"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        style="@style/cm"
+        android:layout_marginTop="4dp"
+        android:background="#FFFFC0CB"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/si_title"
+            style="@style/cm"
+            android:layout_marginBottom="0px"
+            android:lines="1"
+            android:textSize="9pt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/si_content"
+            style="@style/cm"
+            android:layout_marginTop="0px"
+            android:layout_marginBottom="0px"
+            android:lines="1"
+            android:textSize="7pt" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.JuTemp.Home.MyView.TextViewHeightHeight
+        android:id="@+id/nginx_simple_item_handle"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_width="20pt"
+        android:layout_height="20pt"
+        android:text="@string/nginx_move" />
+
+    <!--<com.JuTemp.Home.MyView.TextViewHeightHeight
+        android:id="@+id/nginx_simple_item_remove"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nginx_delete" />-->
+
+</androidx.appcompat.widget.LinearLayoutCompat>

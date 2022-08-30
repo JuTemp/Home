@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_url"
+        android:title="@string/menu_webview_url"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/menu_copy"
+        android:title="@string/menu_default_copy"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_paste"
+        android:title="@string/menu_default_paste"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_ua_wechat"
+        android:title="@string/menu_ua_wechat"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_ua_qq"
+        android:title="@string/menu_ua_qq"
+        app:showAsAction="ifRoom" />
+
+</menu>
+

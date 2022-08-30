@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/qrText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/qrEncode"
+            style="@style/cm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/qr_encode" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/qrScan"
+            style="@style/cm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/qr_scan" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <com.JuTemp.Home.MyView.ImageViewWidthWidth
+                android:id="@+id/qrImageView"
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="9"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFC0CB" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
+

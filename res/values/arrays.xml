@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="activity_list">
+		<item>@string/webview_appname</item>
+		<item>@string/urllist_appname</item>
+		<item>@string/dict_appname</item>
+		<item>@string/music_appname</item>
+		<item>@string/memo_appname</item>
+		<item>@string/qr_appname</item>
+		<item>@string/html_appname</item>
+		<item>@string/curl_appname</item>
+		<item>@string/intent_appname</item>
+		<item>@string/serializer_appname</item>
+		<item>@string/hymmnos_appname</item>
+	</string-array>
+	
+	<string-array name="activity_list_fontsize_number">
+		<item>4</item>
+		<item>6</item>
+		<item>8</item>
+		<item>10</item>
+		<item>12</item>
+		<item>14</item>
+	</string-array>
+
+	<string-array name="activity_list_fontsize">
+		<item>FontSize 4pt</item>
+		<item>FontSize 6pt (Normal)</item>
+		<item>FontSize 8pt</item>
+		<item>FontSize 10pt</item>
+		<item>FontSize 12pt</item>
+		<item>FontSize 14pt</item>
+	</string-array>
+
+</resources>
