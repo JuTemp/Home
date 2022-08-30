@@ -220,9 +220,8 @@
     <string name="uuid_uuid">UUID</string>
     <string name="nginx_appname">Nginx</string>
     <string name="nginx_actionbar">Nginx</string>
-    <string name="nginx_localurl_hint">hint</string>
-    <string name="nginx_localurl_update">update</string>
-    <string name="nginx_add">add one</string>
+    <string name="nginx_localurl_update">Update</string>
+    <string name="nginx_add">Add</string>
 
     <string name="nginx_dialog_textin_title">Type the text</string>
     <string name="nginx_dialog_confirm">Confirm</string>
@@ -235,8 +234,9 @@
     <string name="nginx_import_error">Import Error.</string>
     <string name="nginx_containsplit_error">The title can\'t contain the letter | .</string>
     <string name="nginx_dialog_title">Title</string>
-    <string name="nginx_dialog_content">Content</string>
-    <string name="nginx_move">move</string>
-    <string name="nginx_delete">delete</string>
+    <string name="nginx_dialog_content">Port</string>
+    <string name="nginx_move">Move</string>
+    <string name="nginx_delete">Delete</string>
+    <string name="nginx_localurl_hint">Address</string>
 
 </resources>
