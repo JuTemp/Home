@@ -1,5 +1,6 @@
 package com.JuTemp.Home.FragmentLogics;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.JuTemp.Home.ApplJuTemp;
 import com.JuTemp.Home.MyView.DragAdapter;
@@ -136,9 +139,9 @@ public class NginxJuTemp extends FragmentLogicJuTemp {
         mainlv.setOnItemLongClickListener((parent, v, position, id) -> {
             final View adView = ThisActivity.getLayoutInflater()
                     .inflate(R.layout.nginx_alertdialog_view, null);
-            final String[] titleAndContent = Objects.requireNonNull(spMap.get(spArrayList.get(position))).split("\\|", 2);
-            ((EditText) adView.findViewById(R.id.nginx_title)).setText(titleAndContent[0]);
-            ((EditText) adView.findViewById(R.id.nginx_content)).setText(titleAndContent[1]);
+            ((EditText) adView.findViewById(R.id.nginx_title)).setText(((AppCompatTextView) ((LinearLayoutCompat) ((LinearLayoutCompat) v).getChildAt(0)).getChildAt(0)).getText().toString());
+            String s = ((AppCompatTextView) ((LinearLayoutCompat) ((LinearLayoutCompat) v).getChildAt(0)).getChildAt(1)).getText().toString();
+            ((EditText) adView.findViewById(R.id.nginx_content)).setText(s.substring(s.lastIndexOf(":") + 1, s.length() - 1));
             new AlertDialog.Builder(ThisActivity)
                     .setTitle(Re.getString(R.string.nginx_dialog_modify_title))
                     .setView(adView)
