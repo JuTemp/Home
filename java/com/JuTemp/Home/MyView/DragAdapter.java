@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.JuTemp.Home.FragmentLogics.NginxJuTemp;
 import com.JuTemp.Home.R;
+import com.JuTemp.Home.util.FragmentLogicJuTemp;
 
 import java.util.List;
 import java.util.Map;
@@ -17,13 +19,15 @@ import java.util.Objects;
 
 public class DragAdapter extends BaseAdapter {
 
+    private FragmentLogicJuTemp ThisFragmentLogic;
     private List<Map<String, Object>> data;
     private Context context;
     private int resIdSimpleItem;
 
-    public DragAdapter(List<Map<String, Object>> data, Context context,int resIdSimpleItem) {
+    public DragAdapter(List<Map<String, Object>> data, Context context, FragmentLogicJuTemp ThisFragmentLogic, int resIdSimpleItem) {
         this.data = data;
         this.context = context;
+        this.ThisFragmentLogic=ThisFragmentLogic;
         this.resIdSimpleItem=resIdSimpleItem;
     }
 
@@ -49,8 +53,8 @@ public class DragAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new Holder();
             convertView = View.inflate(context, resIdSimpleItem, null);
-            holder.title = (TextView) convertView.findViewById(R.id.si_title);
-            holder.content = (TextView) convertView.findViewById(R.id.si_content);
+            holder.title = convertView.findViewById(R.id.si_title);
+            holder.content = convertView.findViewById(R.id.si_content);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
@@ -71,6 +75,7 @@ public class DragAdapter extends BaseAdapter {
         data.remove(srcData);
         data.add(end, srcData);
         notifyDataSetChanged();
+        ThisFragmentLogic.saveData(data);
     }
 
     private static class Holder {

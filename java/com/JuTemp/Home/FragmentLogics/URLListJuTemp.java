@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
+
 import com.JuTemp.Home.ApplJuTemp;
 import com.JuTemp.Home.MyView.DragAdapter;
 import com.JuTemp.Home.MyView.DragListView;
@@ -40,9 +43,10 @@ public class URLListJuTemp extends FragmentLogicJuTemp {
 
     private List<Map<String, Object>> initData() {
         List<Map<String, Object>> listItems = new ArrayList<>();
-        for (String str : spArrayList) {
+        for (String key : spArrayList) {
             Map<String, Object> listItem = new HashMap<>();
-            final String[] titleAndContent = sp.getString(str, "|").split("\\|", 2);
+            final String[] titleAndContent = sp.getString(key, "|").split("\\|", 2);
+            listItem.put("key", key);
             listItem.put("title", titleAndContent[0]);
             listItem.put("content", titleAndContent[1]);
             listItems.add(listItem);
@@ -61,7 +65,7 @@ public class URLListJuTemp extends FragmentLogicJuTemp {
         DragListView mainlv = view.findViewById(R.id.urllistDragListView);
         mainlv.setDragViewId(R.id.urllist_simple_item_handle);
         data = initData();
-        dragAdapter = new DragAdapter(data, ThisActivity, R.layout.urllist_simple_item);
+        dragAdapter = new DragAdapter(data, ThisActivity,This, R.layout.urllist_simple_item);
         mainlv.setAdapter(dragAdapter);
 
         Button bnAdd = view.findViewById(R.id.urllistAdd);
@@ -155,9 +159,18 @@ public class URLListJuTemp extends FragmentLogicJuTemp {
             return true;
         });
         mainlv.setOnItemClickListener((parent, v, position, id) -> {
-            String text = spMap.get(spArrayList.get(position));
+            String text = ((AppCompatTextView) ((LinearLayoutCompat) ((LinearLayoutCompat) v).getChildAt(0)).getChildAt(1)).getText().toString();
             IntentJuTempUtil.intentUri(ThisActivity, text);
         });
+    }
+
+    @Override
+    public void saveData(List<Map<String, Object>> datasNew) {
+        spe.remove(SummaryKey);
+        ArrayList<String> spArrayListNew=new ArrayList<>();
+        for (Map<String, Object> dataNew : datasNew) spArrayListNew.add((String) dataNew.get("key"));
+        spe.putString(SummaryKey, ObjectSerializerJuTemp.serialize(ThisActivity, spArrayListNew));
+        spe.commit();
     }
 
     @Override

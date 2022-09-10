@@ -1,16 +1,18 @@
 package com.JuTemp.Home.FragmentLogics;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -47,9 +49,10 @@ public class NginxJuTemp extends FragmentLogicJuTemp {
     private List<Map<String, Object>> initData() {
         List<Map<String, Object>> listItems = new ArrayList<>();
         String prefix = "http://" + spMap.get(LocalURLKey) + ":";
-        for (String str : spArrayList) {
+        for (String key : spArrayList) {
             Map<String, Object> listItem = new HashMap<>();
-            final String[] titleAndContent = sp.getString(str, "|").split("\\|", 2);
+            final String[] titleAndContent = sp.getString(key, "|").split("\\|", 2);
+            listItem.put("key", key);
             listItem.put("title", titleAndContent[0]);
             listItem.put("content", prefix + titleAndContent[1] + "/");
             listItems.add(listItem);
@@ -68,7 +71,7 @@ public class NginxJuTemp extends FragmentLogicJuTemp {
         DragListView mainlv = view.findViewById(R.id.nginxDragListView);
         mainlv.setDragViewId(R.id.nginx_simple_item_handle);
         data = initData();
-        dragAdapter = new DragAdapter(data, ThisActivity, R.layout.nginx_simple_item);
+        dragAdapter = new DragAdapter(data, ThisActivity,This, R.layout.nginx_simple_item);
         mainlv.setAdapter(dragAdapter);
 
         Button bnAdd = view.findViewById(R.id.nginx_add);
@@ -178,6 +181,15 @@ public class NginxJuTemp extends FragmentLogicJuTemp {
             String text = "http://" + spMap.get(LocalURLKey) + ":" + Objects.requireNonNull(spMap.get(spArrayList.get(position))).split("\\|", 2)[1] + "/";
             IntentJuTempUtil.intentUri(ThisActivity, text);
         });
+    }
+
+    @Override
+    public void saveData(List<Map<String, Object>> datasNew) {
+        spe.remove(SummaryKey);
+        ArrayList<String> spArrayListNew=new ArrayList<>();
+        for (Map<String, Object> dataNew : datasNew) spArrayListNew.add((String) dataNew.get("key"));
+        spe.putString(SummaryKey, ObjectSerializerJuTemp.serialize(ThisActivity, spArrayListNew));
+        spe.commit();
     }
 
     private void redraw() {

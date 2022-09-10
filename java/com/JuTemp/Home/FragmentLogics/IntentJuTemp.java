@@ -22,23 +22,32 @@ public class IntentJuTemp extends FragmentLogicJuTemp {
         this.This = (IntentJuTemp) This;
         this.view = view;
 
-        super.requestFocus(ThisActivity, (EditText) view.findViewById(R.id.intent_data));
+        requestFocus(ThisActivity, (EditText) view.findViewById(R.id.intent_data));
 
-        ((Button) view.findViewById(R.id.intent_exec)).setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View p1) {
-                try {
-                    Intent intent = new Intent();
-                    String strUrl = ((EditText) view.findViewById(R.id.intent_data)).getText().toString();
-                    intent.setData(Uri.parse(strUrl));
-                    if (strUrl.startsWith("http://") || strUrl.startsWith("https://"))
-                        intent.setClassName("mark.via", "mark.via.Shell");
-                    ThisActivity.startActivity(intent);
-                } catch (Exception e) {
-                    Toast.makeText(ThisActivity, Re.getString(R.string.intent_error), Toast.LENGTH_LONG).show();
-                }
+        view.findViewById(R.id.intent_exec).setOnClickListener(p1 -> {
+            try {
+                Intent intent = new Intent();
+                String strUrl = ((EditText) view.findViewById(R.id.intent_data)).getText().toString();
+                intent.setData(Uri.parse(strUrl));
+                if (strUrl.startsWith("http://") || strUrl.startsWith("https://"))
+                    intent.setClassName("mark.via", "mark.via.Shell");
+                ThisActivity.startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(ThisActivity, Re.getString(R.string.intent_error), Toast.LENGTH_LONG).show();
             }
         });
+        view.findViewById(R.id.intent_exec).setOnLongClickListener(view1 -> {
+            try {
+                Intent intent = new Intent();
+                String strUrl = ((EditText) view1.findViewById(R.id.intent_data)).getText().toString();
+                intent.setData(Uri.parse(strUrl));
+                ThisActivity.startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(ThisActivity, Re.getString(R.string.intent_error), Toast.LENGTH_LONG).show();
+            }
+            return true;
+        });
+
     }
 
 }
