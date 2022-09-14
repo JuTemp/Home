@@ -9,6 +9,8 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.widget.EditText;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 import com.JuTemp.Home.util.Base64JuTempUtil;
 import com.JuTemp.Home.util.ClipJuTemp;
 import com.JuTemp.Home.util.UUIDGenerateJuTemp;
@@ -19,6 +21,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 
 public class PreferenceJuTemp extends PreferenceActivity {
     PreferenceJuTemp This = this;
@@ -34,14 +37,22 @@ public class PreferenceJuTemp extends PreferenceActivity {
         spe = sp.edit();
         Re = This.getResources();
 
-        This.findPreference(Re.getString(R.string.preference_id_startactivity)).setOnPreferenceChangeListener((preference, newValue) -> {
-            spe.putInt(ApplJuTemp.START_ACTIVITY_INDEX, new ArrayList<>(Arrays.asList(This.getResources().getStringArray(R.array.activity_list))).indexOf((String) newValue));
-            spe.apply();
+        This.findPreference(Re.getString(R.string.preference_id_startactivity)).setOnPreferenceClickListener(preference -> {
+            AppCompatEditText index_edittext = new AppCompatEditText(This);
+            new AlertDialog.Builder(This)
+                    .setTitle(R.string.preference_startactivity)
+                    .setView(index_edittext)
+                    .setPositiveButton(R.string.preference_dialog_posi, (dialog, which) -> {
+                        spe.putString(ApplJuTemp.START_ACTIVITY_INDEX, Objects.requireNonNull(index_edittext.getText()).toString());
+                        spe.apply();
+                    })
+                    .setNegativeButton(R.string.preference_dialog_nega, null)
+                    .create().show();
             return true;
         });
 
         This.findPreference(Re.getString(R.string.preference_id_dict_mode)).setOnPreferenceChangeListener((preference, newValue) -> {
-            spe.putBoolean(ApplJuTemp.DICT_MODE, (boolean) newValue);
+            spe.putBoolean(ApplJuTemp.DICT_MODE, (Boolean) newValue);
             spe.apply();
             return true;
         });

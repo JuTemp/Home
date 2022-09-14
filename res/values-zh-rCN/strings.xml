@@ -205,5 +205,15 @@
     <string name="nginx_dialog_content">端口</string>
     <string name="nginx_move">移动</string>
     <string name="nginx_delete">删除</string>
+    <string name="overlaywindow_start_ow">开启悬浮窗和下拉消息</string>
+    <string name="overlaywindow_stop_ow">关闭悬浮窗和下拉消息</string>
+    <string name="overlaywindow_appname">悬浮窗</string>
+    <string name="overlaywindow_actionbar">悬浮窗</string>
+    <string name="overlaywindow_textin_hint">输入悬浮窗内容</string>
+    <string name="overlaywindow_update">更新</string>
+    <string name="overlaywindow_text_default">默认消息</string>
+    <string name="preference_startactivity">默认界面</string>
+    <string name="notification_title">Home</string>
+    <string name="notification_text">点击打开Home更新悬浮窗内容</string>
 
 </resources>

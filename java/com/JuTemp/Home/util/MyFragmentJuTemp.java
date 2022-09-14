@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -45,7 +46,7 @@ public class MyFragmentJuTemp extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(Re.getLayout((int) FragmentsXmlParserJuTemp.strId2int(Re, PackageName, (String) Objects.requireNonNull(fragmentRe.get("Layout")))), container, false);
+        View view = inflater.inflate(Re.getLayout(FragmentsXmlParserJuTemp.strId2int(Re, PackageName, (String) Objects.requireNonNull(fragmentRe.get("Layout")))), container, false);
         This.mainLogic(ThisActivity, This, view);
         return view;
     }

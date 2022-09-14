@@ -2,6 +2,15 @@
 <resource>
 
     <FragmentLogic>
+        <entry key="Id">OverlayWindowJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_overlaywindow</entry>
+        <entry key="Layout">R.layout.overlaywindow</entry>
+        <entry key="Actionbar">R.menu.menu</entry>
+        <entry key="StringAppName">R.string.overlaywindow_appname</entry>
+        <entry key="StringActionbar">R.string.overlaywindow_actionbar</entry>
+    </FragmentLogic>
+
+    <FragmentLogic>
         <entry key="Id">HtmlJuTemp</entry>
         <entry key="DrawerId">R.id.drawer_html</entry>
         <entry key="Layout">R.layout.html</entry>

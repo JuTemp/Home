@@ -2,24 +2,18 @@ package com.JuTemp.Home;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.ColorRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -28,13 +22,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.JuTemp.Home.util.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.FragmentsXmlParserJuTemp;
 import com.JuTemp.Home.util.MyFragmentJuTemp;
-import com.JuTemp.Home.util.ObjectSerializerJuTemp;
-import com.alibaba.fastjson2.JSON;
-import com.google.android.material.button.MaterialButton;
 
-import org.json.JSONObject;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
@@ -62,7 +50,6 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
 //        This.findViewById(R.id.drawer).getRootView().setBackground(This.getDrawable(R.drawable.home_bg));
 
         PackageName = This.getPackageName();
-
         Re = This.getResources();
         drawerLayout = This.findViewById(R.id.drawer);
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.RIGHT);
@@ -110,7 +97,7 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
     protected void onResume() {
         super.onResume();
 //        ((FragmentLogicJuTemp)((MyFragmentJuTemp)This.getFragmentManager().findFragmentById(R.id.homeFrameLayout)).This).requestFocus(This,EditText);
-        if (This.getIntent().getAction().equals(Intent.ACTION_SEND)) {
+        if (Objects.equals(This.getIntent().getAction(), Intent.ACTION_SEND)) {
             ApplJuTemp.shareFlag = true;
             ApplJuTemp.viaShareString = This.getIntent().getClipData().getItemAt(0).getText().toString();
             View alertdialogView = This.getLayoutInflater().inflate(R.layout.fragment_choose_view, null);
@@ -120,21 +107,18 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
                     .setCancelable(false)
                     .create();
             fragment_choose_alertdialog.show();
-            for (int i : new int[]{R.id.fragment_choose_webview,R.id.fragment_choose_urllist, R.id.fragment_choose_qr}) {
+            for (int i : new int[]{R.id.fragment_choose_webview, R.id.fragment_choose_urllist, R.id.fragment_choose_qr}) {
                 alertdialogView.findViewById(i).setOnClickListener(fragment_choose_ocl);
             }
             return;
         }
-        if ("lx".equals(This.getIntent().getStringExtra("key"))) {
-            int i = FRAGMENTLOGIC_ARRAYLIST.indexOf("LxJuTemp");
-            ApplJuTemp.lxFlag = true;
-//            if (index == i) return;
-            index = i;
-            This.refreshFragment(This, false);
+        index = This.getIntent().getIntExtra("index", -2);
+        if (index != -2) {
+            This.refreshFragment(This,true);
             return;
         }
         index = PreferenceManager.getDefaultSharedPreferences(This).getInt(ApplJuTemp.START_ACTIVITY_INDEX, -1);
-        if (index > 0) This.refreshFragment(This, false);
+        if (index >= 0) This.refreshFragment(This, false);
     }
 
     private final OnClickListener fragment_choose_ocl = view -> {
@@ -222,7 +206,8 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
         try {
             return Class.forName(PackageName + "." + classname).newInstance();
         } catch (Exception ex) {
-            Log.e("Home:getClassHome", ex.toString());
+            //Log.e("Home:getClassHome", ex.toString());
+            ex.printStackTrace();
         }
         return null;
     }

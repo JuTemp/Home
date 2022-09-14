@@ -5,13 +5,10 @@
         android:key="@string/preference_id_general"
         android:title="@string/preference_general">
 
-        <ListPreference
-            android:dialogTitle="@string/preference_start_dialogtitle"
-            android:entries="@array/activity_list"
-            android:entryValues="@array/activity_list"
+        <Preference
             android:key="@string/preference_id_startactivity"
             android:summary="@string/preference_start_summary"
-            android:title="@string/preference_start_title" />
+            android:title="@string/preference_startactivity" />
 
     </PreferenceCategory>
 

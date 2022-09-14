@@ -1,13 +1,11 @@
 package com.JuTemp.Home.MyView;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.JuTemp.Home.FragmentLogics.NginxJuTemp;
 import com.JuTemp.Home.R;
 import com.JuTemp.Home.util.FragmentLogicJuTemp;
 

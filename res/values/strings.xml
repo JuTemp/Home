@@ -238,5 +238,16 @@
     <string name="nginx_move">Move</string>
     <string name="nginx_delete">Delete</string>
     <string name="nginx_localurl_hint">Address</string>
+    <string name="overlaywindow_start_ow">Start Service</string>
+    <string name="overlaywindow_stop_ow">Stop Service</string>
+
+    <string name="overlaywindow_appname">OverlayWindow</string>
+    <string name="overlaywindow_actionbar">OverlayWindow</string>
+    <string name="overlaywindow_textin_hint">Type in the content...</string>
+    <string name="overlaywindow_update">Update</string>
+    <string name="overlaywindow_text_default">Default Message</string>
+    <string name="preference_startactivity">Default Fragment</string>
+    <string name="notification_title">Home</string>
+    <string name="notification_text">Click to update the content of the overlay window.</string>
 
 </resources>

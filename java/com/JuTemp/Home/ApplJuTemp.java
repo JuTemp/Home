@@ -17,12 +17,15 @@ public final class ApplJuTemp extends Application {
     public static final String NGINX_ARRAY = "NginxArray";
     public static final String MEMO = "MEMO";
     public static final String START_ACTIVITY_INDEX="StartActivityIndex";
+    public static final String OVERLAY_WINDOW_SAVING="OverlayWindow";
     public static final String DICT_MODE="DictMode";
     public static final String DICT_FONTSIZE="DictFontSize";
     public static final String DICT_APPID_SPF="DictAPPID";
     public static final String DICT_APPKEY_SPF="DictAPPKEY";
     public static final String BOOTALARMMEMO_FLAG="BootAlarmMemoFlag";
     public static final String BOOTALARMMEMO_CONTENT="BootAlarmMemoContent";
+    public static final int NOTIFICATION_ID = 520;
+    public static final String NOTIFICATION_CHANNEL = "520";
     public static String DICT_APPID = "";
     public static String DICT_APPKEY = "";
     public static final int FILE_SELECTOR_REQUEST_CODE = 520530;
