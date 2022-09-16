@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,8 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
     AlertDialog fragment_choose_alertdialog = null;
 
     static int index = 0;
+    FragmentLogicJuTemp FragmentLogicIndex = null;
+    static boolean flagOnResume = true;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -84,6 +87,10 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
         addViewPreferenceAndExit(layoutInflater, drawerItemsLinearLayout, "Exit", R.string.exit_appname);
         drawerItemsLinearLayout.getChildAt(drawerItemsLinearLayout.getChildCount() - 1).setBackgroundColor(Color.LTGRAY);
 
+        index = PreferenceManager.getDefaultSharedPreferences(This).getInt(ApplJuTemp.START_ACTIVITY_INDEX, -1);
+        if (index >= 0) This.refreshFragment(This, false);
+
+        flagOnResume = true;
     }
 
     private void addViewPreferenceAndExit(LayoutInflater layoutInflater, LinearLayoutCompat drawerItemsLinearLayout, String tagString, int textId) {
@@ -98,6 +105,7 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
         super.onResume();
 //        ((FragmentLogicJuTemp)((MyFragmentJuTemp)This.getFragmentManager().findFragmentById(R.id.homeFrameLayout)).This).requestFocus(This,EditText);
         if (Objects.equals(This.getIntent().getAction(), Intent.ACTION_SEND)) {
+            if (!flagOnResume) return;
             ApplJuTemp.shareFlag = true;
             ApplJuTemp.viaShareString = This.getIntent().getClipData().getItemAt(0).getText().toString();
             View alertdialogView = This.getLayoutInflater().inflate(R.layout.fragment_choose_view, null);
@@ -110,15 +118,16 @@ public class HomeJuTemp extends AppCompatActivity implements OnClickListener {
             for (int i : new int[]{R.id.fragment_choose_webview, R.id.fragment_choose_urllist, R.id.fragment_choose_qr}) {
                 alertdialogView.findViewById(i).setOnClickListener(fragment_choose_ocl);
             }
+            flagOnResume = false;
             return;
         }
-        index = This.getIntent().getIntExtra("index", -2);
-        if (index != -2) {
-            This.refreshFragment(This,true);
+
+        // OverlayWindowService intent to OverlayWindowJuTemp
+        int indexNew = This.getIntent().getIntExtra("index", -2);
+        if (indexNew != -2) {
+            This.refreshFragment(This, true);
             return;
         }
-        index = PreferenceManager.getDefaultSharedPreferences(This).getInt(ApplJuTemp.START_ACTIVITY_INDEX, -1);
-        if (index >= 0) This.refreshFragment(This, false);
     }
 
     private final OnClickListener fragment_choose_ocl = view -> {

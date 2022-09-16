@@ -1,5 +1,5 @@
-Home.app 4.1.0 OverlayWindow
-  --JuTemp 20220914
+Home.app 4.1.1 OverlayWindow
+  --JuTemp 20220916
 
 你可以打开ai.youdao.com自行申请APPID和APPKEY
 
@@ -9,4 +9,6 @@ Home.app 4.1.0 OverlayWindow
 不会修改 以后再说
 
 4.1.0版本实现了新功能 请给予悬浮窗权限
+
+4.1.1版本修复了两个bug 下两周军训就不写了 
 
