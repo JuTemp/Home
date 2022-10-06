@@ -9,11 +9,11 @@ import android.view.View;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.JuTemp.Home.ApplJuTemp;
-import com.JuTemp.Home.HomeJuTemp;
-import com.JuTemp.Home.OverlayWindowServiceJuTemp;
+import com.JuTemp.Home.Activities.ApplJuTemp;
+import com.JuTemp.Home.Activities.HomeJuTemp;
+import com.JuTemp.Home.Services.OverlayWindowServiceJuTemp;
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.MessageJuTemp;
 import com.JuTemp.Home.util.NotificationJuTemp;
 
@@ -30,7 +30,7 @@ public class OverlayWindowJuTemp extends FragmentLogicJuTemp {
     SharedPreferences.Editor spe = null;
 
 
-    final String ServiceName = "com.JuTemp.Home.OverlayWindowServiceJuTemp";
+    final String ServiceName = "com.JuTemp.Home.Services.OverlayWindowServiceJuTemp";
 
     @Override
     public void mainLogic(Activity ThisActivity, FragmentLogicJuTemp fragmentLogic, View view) {

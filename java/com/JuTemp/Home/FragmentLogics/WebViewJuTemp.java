@@ -8,9 +8,9 @@ import android.widget.*;
 import android.widget.SearchView.*;
 
 import com.JuTemp.Home.*;
+import com.JuTemp.Home.Activities.ApplJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.*;
-
-import android.view.View.OnClickListener;
 
 import java.util.Objects;
 
@@ -46,7 +46,7 @@ public class WebViewJuTemp extends FragmentLogicJuTemp {
     public void onResume() {
         super.onResume();
         if (ApplJuTemp.viaShareString != null && !ApplJuTemp.viaShareString.isEmpty()) {
-            if (ApplJuTemp.shareFlag) {
+            if (ApplJuTemp.fragmentHaveChosen && ApplJuTemp.shareFlag) {
                 ApplJuTemp.shareFlag = false;
                 String viaShareString = ApplJuTemp.viaShareString.substring(ApplJuTemp.viaShareString.indexOf("http")).trim();
                 ApplJuTemp.viaShareString = null;

@@ -6,7 +6,7 @@ import android.view.*;
 import android.view.View.*;
 import android.widget.*;
 import com.JuTemp.Home.*;
-import com.JuTemp.Home.util.*;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 
 public class HymmnosJuTemp extends FragmentLogicJuTemp
 {

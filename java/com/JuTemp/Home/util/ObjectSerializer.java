@@ -26,11 +26,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 
 public class ObjectSerializer {
 
-    public static String serialize(Serializable obj) throws IOException {
+    public static String serialize(Object obj) throws IOException {
         if (obj == null) return "";
         ByteArrayOutputStream serialObj = new ByteArrayOutputStream();
         ObjectOutputStream objStream = new ObjectOutputStream(serialObj);

@@ -9,8 +9,7 @@ import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.JuTemp.Home.HomeJuTemp;
-import com.JuTemp.Home.LxActivityJuTemp;
+import com.JuTemp.Home.Activities.LxActivityJuTemp;
 import com.JuTemp.Home.R;
 
 public class ShortcutJuTemp {

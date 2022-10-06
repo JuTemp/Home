@@ -5,12 +5,11 @@ import android.content.*;
 import android.net.*;
 import android.os.*;
 import android.view.*;
-import android.view.View.*;
 import android.widget.*;
 
-import androidx.annotation.NonNull;
-
 import com.JuTemp.Home.*;
+import com.JuTemp.Home.Activities.ApplJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.*;
 
 public class HtmlJuTemp extends FragmentLogicJuTemp {
@@ -80,7 +79,7 @@ public class HtmlJuTemp extends FragmentLogicJuTemp {
                 String response = HTTPJuTemp.getHTML_UA(textin, ua);
                 handler.sendMessage(MessageJuTemp.String2Message(HANDLER_SETTEXT, response.length() < 5000 ? response : response.substring(0, 5000)));
 
-                WriteFileJuTemp.write(((TextView) view.findViewById(R.id.edinpath)).getText().toString(), response);
+                WriteFileJuTemp.write("/!temp/temp/",((TextView) view.findViewById(R.id.edinpath)).getText().toString(), response);
             } catch (Exception e) {
                 handler.sendMessage(MessageJuTemp.String2Message(HANDLER_TOAST, e.toString()));
             }

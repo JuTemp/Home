@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 
 import java.util.List;
 import java.util.Map;
@@ -52,13 +52,13 @@ public class DragAdapter extends BaseAdapter {
             holder = new Holder();
             convertView = View.inflate(context, resIdSimpleItem, null);
             holder.title = convertView.findViewById(R.id.si_title);
-            holder.content = convertView.findViewById(R.id.si_content);
+            if (convertView.findViewById(R.id.si_content)!=null) holder.content = convertView.findViewById(R.id.si_content);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
         }
         holder.title.setText(Objects.requireNonNull(data.get(position).get("title")).toString());
-        holder.content.setText(Objects.requireNonNull(data.get(position).get("content")).toString());
+        if (data.get(position).containsKey("content")) holder.content.setText(Objects.requireNonNull(data.get(position).get("content")).toString());
 
         return convertView;
     }

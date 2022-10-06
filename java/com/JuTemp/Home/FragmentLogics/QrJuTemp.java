@@ -5,14 +5,12 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.JuTemp.Home.ApplJuTemp;
-import com.JuTemp.Home.HomeJuTemp;
+import com.JuTemp.Home.Activities.ApplJuTemp;
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -48,14 +46,12 @@ public class QrJuTemp extends FragmentLogicJuTemp {
     @Override
     public void onResume() {
         super.onResume();
-        if (ApplJuTemp.viaShareString != null && !ApplJuTemp.viaShareString.isEmpty()) {
-            if (ApplJuTemp.shareFlag) {
-                ApplJuTemp.shareFlag=false;
-                String viaShareString = ApplJuTemp.viaShareString.substring(ApplJuTemp.viaShareString.indexOf("http")).trim();
-                ApplJuTemp.viaShareString=null;
-                ((EditText) view.findViewById(R.id.qrText)).setText(viaShareString);
-                qrImageView.setImageBitmap(generateBitmap(viaShareString, 972, 972));//
-            } else requestFocus(ThisActivity, view.findViewById(R.id.qrText));
+        if (ApplJuTemp.viaShareString != null && !ApplJuTemp.viaShareString.isEmpty() && ApplJuTemp.shareFlag && ApplJuTemp.fragmentHaveChosen) {
+            ApplJuTemp.shareFlag = false;
+            String viaShareString = ApplJuTemp.viaShareString.substring(ApplJuTemp.viaShareString.indexOf("http")).trim();
+            ApplJuTemp.viaShareString = null;
+            ((EditText) view.findViewById(R.id.qrText)).setText(viaShareString);
+            qrImageView.setImageBitmap(generateBitmap(viaShareString, 972, 972));//
         } else requestFocus(ThisActivity, view.findViewById(R.id.qrText));
     }
 

@@ -56,7 +56,6 @@
     <string name="urllist_dialog_cancel">Cancel</string>
     <string name="urllist_dialog_modify_title">Modify?</string>
     <string name="urllist_dialog_modify">Modify</string>
-    <string name="urllist_import_error">Import Error.</string>
     <string name="urllist_containsplit_error">The title can\'t contain the letter | .</string>
     <string name="urllist_dialog_title">Title</string>
     <string name="urllist_dialog_content">Content</string>
@@ -73,7 +72,7 @@
     <string name="music_playlist">Playlist</string>
 
     <string name="memo_add">Add A Note</string>
-    <string name="memo_dialog_textin_title">Enter the Text</string>
+    <string name="memo_dialog_textin_title">Type the text</string>
     <string name="memo_dialog_confirm">Confirm</string>
     <string name="memo_dialog_deleteall_title">Delete All?</string>
     <string name="memo_dialog_delete_title">Delete?</string>
@@ -81,7 +80,11 @@
     <string name="memo_dialog_cancel">Cancel</string>
     <string name="memo_dialog_modify_title">Modify?</string>
     <string name="memo_dialog_modify">Modify</string>
-    <string name="memo_import_error">Import Error.</string>
+    <string name="memo_containsplit_error">The title can\'t contain the letter | .</string>
+    <string name="memo_dialog_title">Title</string>
+    <string name="memo_dialog_content">Content</string>
+    <string name="memo_move">move</string>
+    <string name="memo_delete">delete</string>
 
     <string name="qr_encode">Encode</string>
     <string name="qr_scan">Scan</string>
@@ -231,7 +234,6 @@
     <string name="nginx_dialog_cancel">Cancel</string>
     <string name="nginx_dialog_modify_title">Modify?</string>
     <string name="nginx_dialog_modify">Modify</string>
-    <string name="nginx_import_error">Import Error.</string>
     <string name="nginx_containsplit_error">The title can\'t contain the letter | .</string>
     <string name="nginx_dialog_title">Title</string>
     <string name="nginx_dialog_content">Port</string>
@@ -240,7 +242,6 @@
     <string name="nginx_localurl_hint">Address</string>
     <string name="overlaywindow_start_ow">Start Service</string>
     <string name="overlaywindow_stop_ow">Stop Service</string>
-
     <string name="overlaywindow_appname">OverlayWindow</string>
     <string name="overlaywindow_actionbar">OverlayWindow</string>
     <string name="overlaywindow_textin_hint">Type in the content...</string>
@@ -249,5 +250,13 @@
     <string name="preference_startactivity">Default Fragment</string>
     <string name="notification_title">Home</string>
     <string name="notification_text">Click to update the content of the overlay window.</string>
+    <string name="space" translatable="false"> </string>
+    <string name="import_error">Import Error.</string>
+    <string name="menu_shortcut_yes">Save</string>
+    <string name="menu_shortcut_no">Cancel</string>
+    <string name="preference_hint_startactivity">Which one (start from 1)</string>
+
+    <string name="memotext_appname">MemoText</string>
+    <string name="memotext_actionbar">MemoText</string>
 
 </resources>

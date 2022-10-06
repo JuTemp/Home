@@ -1,9 +1,9 @@
 package com.JuTemp.Home.FragmentLogics;
 import android.app.*;
 import android.view.*;
-import android.view.View.*;
 import android.widget.*;
 import com.JuTemp.Home.*;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.*;
 
 public class SerializerJuTemp extends FragmentLogicJuTemp

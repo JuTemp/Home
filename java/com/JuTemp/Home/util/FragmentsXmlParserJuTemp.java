@@ -13,10 +13,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FragmentsXmlParserJuTemp {
-    public static ArrayList<HashMap<String, Object>> initFragmentsXml(Activity This,boolean whetherDeveloper) {
+
+    public static ArrayList<HashMap<String, Object>> initFragmentsXml(Activity This,int xmlResId) {
         ArrayList<HashMap<String, Object>> FragmentsXml = new ArrayList<>();
         try {
-            XmlPullParser xpp = This.getResources().getXml(whetherDeveloper?R.xml.fragments_developer:R.xml.fragments);
+            XmlPullParser xpp = This.getResources().getXml(xmlResId);
             o: while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
                 HashMap<String, Object> item = new HashMap<>();
                 if (xpp.getEventType() == XmlPullParser.START_TAG) {
@@ -51,7 +52,7 @@ public class FragmentsXmlParserJuTemp {
 
     public static int strId2int(final Resources Re, final String packageName, final String strId) // R.id.xxx -> 0x7f010001
     {
-        String[] strIdArray = strId.split("\\.");
+        String[] strIdArray = strId.split("\\.",3);
         return Re.getIdentifier(strIdArray[2], strIdArray[1], packageName);
     }
 }

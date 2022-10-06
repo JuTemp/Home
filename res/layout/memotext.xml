@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/memotext_title"
+        style="@style/c"
+        android:layout_margin="14dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#80FFFFFF"
+        android:hint="@string/space"
+        android:lines="1"
+        android:textColorHint="@android:color/transparent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/memotext_content"
+        style="@style/c"
+        android:gravity="top"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_margin="14dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#80FFFFFF"
+        android:hint="@string/space"
+        android:textColorHint="@android:color/transparent" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

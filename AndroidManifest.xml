@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
 
     <application
-        android:name=".ApplJuTemp"
+        android:name=".Activities.ApplJuTemp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_tp"
         android:label="@string/app_name"
@@ -29,7 +29,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".HomeJuTemp"
+            android:name=".Activities.HomeJuTemp"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -53,33 +53,33 @@
         </activity>
 
         <activity
-            android:name=".PreferenceJuTemp"
+            android:name=".Activities.PreferenceJuTemp"
             android:label="@string/preference_appname"
             android:theme="@style/Theme.MaterialComponents.OverridePreference" />
 
         <activity
-            android:name=".LxActivityJuTemp"
+            android:name=".Activities.LxActivityJuTemp"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:theme="@style/NoDisplay" />
 
         <activity
-            android:name=".ExitJuTemp"
+            android:name=".Activities.ExitJuTemp"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:theme="@style/NoDisplay" />
 
-        <activity android:name=".BootAlarmMemoJuTemp" />
+        <activity android:name=".Activities.BootAlarmMemoJuTemp" />
 
         <activity
-            android:name=".MarqueeActivityJuTemp"
+            android:name=".Activities.MarqueeActivityJuTemp"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <receiver
-            android:name=".BootBroadcastReceiverJuTemp"
+            android:name=".Receivers.BootBroadcastReceiverJuTemp"
             android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -87,9 +87,9 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".BootBroadcastService" />
+        <service android:name=".Services.BootBroadcastService" />
 
-        <service android:name=".OverlayWindowServiceJuTemp"/>
+        <service android:name=".Services.OverlayWindowServiceJuTemp"/>
 
     </application>
 

@@ -7,14 +7,10 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,7 +18,7 @@ import androidx.annotation.NonNull;
 import com.JuTemp.Home.MyView.BaseAdapterWuxibusBusStop;
 import com.JuTemp.Home.MyView.BaseAdapterWuxibusDirection;
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 

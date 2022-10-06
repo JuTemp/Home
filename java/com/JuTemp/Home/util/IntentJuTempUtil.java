@@ -5,7 +5,7 @@ import android.content.*;
 import android.net.*;
 import android.widget.*;
 
-import com.JuTemp.Home.ApplJuTemp;
+import com.JuTemp.Home.Activities.ApplJuTemp;
 
 public class IntentJuTempUtil {
 	public static void intentUri(Activity This, String str) {

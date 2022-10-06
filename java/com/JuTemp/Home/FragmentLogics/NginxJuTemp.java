@@ -4,24 +4,21 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
-import com.JuTemp.Home.ApplJuTemp;
+import com.JuTemp.Home.Activities.ApplJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.MyView.DragAdapter;
 import com.JuTemp.Home.MyView.DragListView;
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.IntentJuTempUtil;
 import com.JuTemp.Home.util.ObjectSerializerJuTemp;
 import com.JuTemp.Home.util.UUIDGenerateJuTemp;
@@ -211,13 +208,14 @@ public class NginxJuTemp extends FragmentLogicJuTemp {
                 spArrayList.add(key);
                 spe.putString(key, spMapNew.get(keyInNew));
             }
+            ((AppCompatEditText) view.findViewById(R.id.nginx_localurl)).setText(spMapNew.get(LocalURLKey));
             spe.putString(SummaryKey, ObjectSerializerJuTemp.serialize(ThisActivity, spArrayList));
             spe.commit();
             spMap = (HashMap<String, String>) sp.getAll();
             ((NginxJuTemp) This).redraw();
         } catch (Exception e) {
             Log.e("import", e.toString());
-            Toast.makeText(ThisActivity, Re.getString(R.string.nginx_import_error), Toast.LENGTH_LONG).show();
+            Toast.makeText(ThisActivity, Re.getString(R.string.import_error), Toast.LENGTH_LONG).show();
         }
     }
 

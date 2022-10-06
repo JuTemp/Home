@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,11 +14,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.JuTemp.Home.ApplJuTemp;
+import com.JuTemp.Home.Activities.ApplJuTemp;
 import com.JuTemp.Home.R;
 import com.JuTemp.Home.util.Base64JuTempUtil;
 import com.JuTemp.Home.util.CurrentTimeJuTemp;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.HTTPJuTemp;
 import com.JuTemp.Home.util.IntentJuTempUtil;
 import com.JuTemp.Home.util.MessageJuTemp;
@@ -29,7 +28,6 @@ import com.JuTemp.Home.util.SHA256JuTemp;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.net.URLEncoder;
 import java.util.HashMap;
 
 public class DictJuTemp extends FragmentLogicJuTemp {
@@ -39,7 +37,7 @@ public class DictJuTemp extends FragmentLogicJuTemp {
     static final int HANDLER_SETTEXT = 520521;
     static final int TYPE_BrE = 1;
     static final int TYPE_NAmE = 2;
-    //    static final String APPID = "5acc96a879d92623";
+//    static final String APPID = "5acc96a879d92623";
 //    static final String APPKEY = "zrt5RLBLAlMziCVhI1AHwOgUr7bexdlw";
     DictJuTemp This = null;
     Activity ThisActivity = null;

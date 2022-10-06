@@ -13,7 +13,7 @@
     <FragmentLogic>
         <entry key="Id">URLListJuTemp</entry>
         <entry key="DrawerId">R.id.drawer_urllist</entry>
-        <entry key="Layout">R.layout.urllist</entry>
+        <entry key="Layout">R.layout.list</entry>
         <entry key="Actionbar">R.menu.menu_memo</entry>
         <entry key="StringAppName">R.string.urllist_appname</entry>
         <entry key="StringActionbar">R.string.urllist_actionbar</entry>
@@ -49,7 +49,7 @@
     <FragmentLogic>
         <entry key="Id">MemoJuTemp</entry>
         <entry key="DrawerId">R.id.drawer_memo</entry>
-        <entry key="Layout">R.layout.memo</entry>
+        <entry key="Layout">R.layout.list</entry>
         <entry key="Actionbar">R.menu.menu_memo</entry>
         <entry key="StringAppName">R.string.memo_appname</entry>
         <entry key="StringActionbar">R.string.memo_actionbar</entry>

@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.JuTemp.Home.R;
 import com.JuTemp.Home.util.Base64JuTempUtil;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 
 public class Base64JuTemp extends FragmentLogicJuTemp {
 

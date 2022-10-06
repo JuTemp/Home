@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.JuTemp.Home.MarqueeActivityJuTemp;
+import com.JuTemp.Home.Activities.MarqueeActivityJuTemp;
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 
 public class MarqueeJuTemp extends FragmentLogicJuTemp {
 

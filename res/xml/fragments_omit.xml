@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+
+    <FragmentLogic>
+        <entry key="Id">MemoTextJuTemp</entry>
+        <entry key="DrawerId">R.id.drawer_memotext</entry>
+        <entry key="Layout">R.layout.memotext</entry>
+        <entry key="Actionbar">R.menu.menu_yesno</entry>
+        <entry key="StringAppName">R.string.memotext_appname</entry>
+        <entry key="StringActionbar">R.string.memotext_actionbar</entry>
+    </FragmentLogic>
+
+</resource>

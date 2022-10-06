@@ -2,24 +2,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-	
-	<EditText
-		android:id="@+id/memo_content"
-		style="@style/c"/>
-	
-	<LinearLayout
-		style="@style/c"
-		android:orientation="horizontal">
-		
-		<Button
-			android:id="@+id/memo_upward"
-			style="@style/c"/>
-		
-		<Button
-			android:id="@+id/memo_downward"
-			style="@style/c"/>
-		
-	</LinearLayout>
-		
-    
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/memo_title"
+            style="@style/c"
+            android:hint="@string/memo_dialog_title" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/memo_content"
+            style="@style/c"
+            android:hint="@string/memo_dialog_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 </LinearLayout>

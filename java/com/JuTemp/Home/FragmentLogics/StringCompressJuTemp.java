@@ -5,14 +5,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.widget.AppCompatEditText;
-
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.LZ78JuTemp;
-import com.JuTemp.Home.util.ObjectSerializerJuTemp;
-
-import java.util.Objects;
 
 public class StringCompressJuTemp extends FragmentLogicJuTemp {
     @Override

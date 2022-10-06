@@ -2,7 +2,6 @@ package com.JuTemp.Home.util;
 
 import android.widget.*;
 import android.app.*;
-import java.io.*;
 
 public class ObjectSerializerJuTemp
 {
@@ -19,7 +18,7 @@ public class ObjectSerializerJuTemp
 		return null;
 	}
 	
-	public static String serialize(Activity This,Serializable obj)
+	public static String serialize(Activity This, Object obj)
 	{
 		try
 		{

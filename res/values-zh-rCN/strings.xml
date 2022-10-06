@@ -53,7 +53,6 @@
     <string name="urllist_dialog_cancel">取消</string>
     <string name="urllist_dialog_modify_title">修改？</string>
     <string name="urllist_dialog_modify">修改</string>
-    <string name="urllist_import_error">导入失败</string>
     <string name="urllist_containsplit_error">标题不可以包含字符“|”</string>
     <string name="urllist_dialog_title">网页标题</string>
     <string name="urllist_dialog_content">网页链接</string>
@@ -76,7 +75,11 @@
     <string name="memo_dialog_cancel">取消</string>
     <string name="memo_dialog_modify_title">修改？</string>
     <string name="memo_dialog_modify">修改</string>
-    <string name="memo_import_error">导入失败</string>
+    <string name="memo_containsplit_error">标题不可以包含字符“|”</string>
+    <string name="memo_dialog_title">备忘录标题</string>
+    <string name="memo_dialog_content">备忘录简介</string>
+    <string name="memo_move">移动</string>
+    <string name="memo_delete">删除</string>
 
     <string name="qr_encode">生成</string>
     <string name="qr_scan">扫描</string>
@@ -199,7 +202,6 @@
     <string name="nginx_dialog_cancel">取消</string>
     <string name="nginx_dialog_modify_title">修改？</string>
     <string name="nginx_dialog_modify">修改</string>
-    <string name="nginx_import_error">导入失败</string>
     <string name="nginx_containsplit_error">标题不可以包含字符“|”</string>
     <string name="nginx_dialog_title">标题</string>
     <string name="nginx_dialog_content">端口</string>

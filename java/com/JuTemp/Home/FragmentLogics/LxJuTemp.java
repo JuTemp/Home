@@ -1,20 +1,12 @@
 package com.JuTemp.Home.FragmentLogics;
 
 import android.app.Activity;
-import android.app.PendingIntent;
-import android.content.Intent;
-import android.content.pm.ShortcutInfo;
-import android.content.pm.ShortcutManager;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.JuTemp.Home.ApplJuTemp;
-import com.JuTemp.Home.HomeJuTemp;
 import com.JuTemp.Home.R;
-import com.JuTemp.Home.util.FragmentLogicJuTemp;
+import com.JuTemp.Home.FragmentFramework.FragmentLogicJuTemp;
 import com.JuTemp.Home.util.ShortcutJuTemp;
 
 public class LxJuTemp extends FragmentLogicJuTemp {
